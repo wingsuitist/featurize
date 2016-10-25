@@ -1,3 +1,6 @@
-<p>
-  feature-list works!
-</p>
+<h2>Features</h2>
+
+<div *ngFor="let feature of features|async">
+  <hr />
+  <a routerLink="/features/{{feature.id}}">{{feature.title}}</a>
+</div>

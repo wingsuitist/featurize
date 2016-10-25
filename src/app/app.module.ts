@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
+import { FeatureService } from './shared';
+
 import { AppComponent } from './app.component';
 import { FeatureListComponent } from './feature-list/feature-list.component';
 import { FeatureTopComponent } from './feature-top/feature-top.component';
@@ -26,7 +28,7 @@ import { NavigationComponent } from './navigation.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FeatureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

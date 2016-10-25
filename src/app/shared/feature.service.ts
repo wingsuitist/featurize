@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 @Injectable()
-export class FeaturesService {
+export class FeatureService {
   private headers = new Headers({ 'Content-Type': 'application/json' });
   private featuresUrl = 'http://localhost:3000/features/'
 

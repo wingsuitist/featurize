@@ -3,5 +3,5 @@ export class Feature {
   title: string;
   author: string;
   description: string;
-  rating: Array<any>;
+  ratings: Array<any>;
 }

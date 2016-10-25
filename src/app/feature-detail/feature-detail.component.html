@@ -1,3 +1,15 @@
-<p>
-  feature-detail works!
-</p>
+<article *ngIf="feature != undefined">
+  <h2>{{feature.title}}</h2>
+  <p>
+    {{feature.author}}
+  </p>
+  <p>
+    {{feature.description}}
+  </p>
+  <ul>
+    <li *ngFor="let rating of feature.ratings">
+      {{rating.username}}
+      <strong>{{rating.rating}}</strong>
+    </li>
+  </ul>
+</article>

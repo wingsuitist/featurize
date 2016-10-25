@@ -13,11 +13,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
   pages = [
-    {link: "top", title: "Top Features"},
     {link: "features", title: "Features"},
-    {link: "add", title: "Add"},
+    {link: "features/top", title: "Top Features"},
+    {link: "features/add", title: "Add"},
   ];
-  
+
   constructor() { }
 
   ngOnInit() {
