@@ -7,11 +7,11 @@ import { FeatureEditComponent } from './feature-edit/feature-edit.component';
 import { FeatureDetailComponent } from './feature-detail/feature-detail.component';
 
 const routes: Routes = [
-  { path: 'features', component: FeatureListComponent },
-  { path: 'features/:id', component: FeatureDetailComponent },
   { path: 'features/top', component: FeatureTopComponent },
   { path: 'features/add', component: FeatureEditComponent },
   { path: 'features/edit/:id', component: FeatureEditComponent },
+  { path: 'features/:id', component: FeatureDetailComponent },
+  { path: 'features', component: FeatureListComponent },
   { path: '', component: FeatureListComponent },
   { path: '**', component: FeatureListComponent }
 ];
