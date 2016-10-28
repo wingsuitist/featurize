@@ -15,7 +15,7 @@ export class FeatureService {
 
   getFeatures(): Observable<Feature[]> {
     return this.http.get(this.featuresUrl)
-      .map(response => response.json())
+      .map(response => response.json().map(feature => new Feature(feature)))
       .catch(this.handleError);
   }
 
