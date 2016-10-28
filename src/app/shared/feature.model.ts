@@ -14,9 +14,9 @@ export class Feature {
   }
 
   getRating(): number {
-    let ratingSum: number = 1;
+    let ratingSum = 0;
     for (let rating of this.ratings) {
-      ratingSum += parseInt(rating.rating);
+      ratingSum = ratingSum + parseInt(rating.rating);
     }
     return ratingSum;
   }

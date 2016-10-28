@@ -2,6 +2,6 @@
 
 <div *ngFor="let feature of features">
   <hr />
-  <a routerLink="/features/{{feature.id}}">{{feature.title}}</a>
   {{feature.getRating()}}
+  <a routerLink="/features/{{feature.id}}">{{feature.title}}</a>
 </div>
