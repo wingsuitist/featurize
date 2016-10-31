@@ -30,7 +30,7 @@ export class FeatureService {
       .catch(this.handleError);
   }
 
-  create(feature: Feature): Observable<Feature> {
+  add(feature: Feature): Observable<Feature> {
     return this.http
       .post(this.featuresUrl,
         JSON.stringify(feature),

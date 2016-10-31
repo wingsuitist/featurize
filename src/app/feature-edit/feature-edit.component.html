@@ -1,3 +1,44 @@
-<p>
-  feature-edit works!
-</p>
+<h2 *ngIf="id">
+  Edit {{feature.title}}
+</h2>
+<h2 *ngIf="!id">
+  New feature
+</h2>
+
+<div>{{message}}</div>
+
+<form *ngIf="!storing" (ngSubmit)="save()" #featureForm="ngForm">
+
+  <div>
+    <label for="title">Title</label>
+    <input type="text" id="name"  name="title" 
+      #title="ngModel" #titleTag [(ngModel)]="feature.title" required>
+      
+    <div [hidden]="title.valid || title.pristine">
+      Please set name.
+    </div>
+  </div>
+  
+  <div>
+    <label for="description">Description</label><br/>
+
+    <textarea id="description" name="description"
+      #description="ngModel" [(ngModel)]="feature.description" required></textarea>
+
+    <div class="error" [hidden]="description.valid || description.pristine">
+      Please add description.
+    </div>
+  </div>
+
+  <button type="submit"
+   [disabled]="!featureForm.form.valid">Save</button>
+
+  <h3>title classes</h3>+
+  {{titleTag.className}}
+
+  <h3>data</h3>
+  <pre>
+  {{feature | json}}
+  </pre>
+
+</form>
