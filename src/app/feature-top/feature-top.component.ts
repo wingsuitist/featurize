@@ -14,7 +14,18 @@ export class FeatureTopComponent implements OnInit {
 
   ngOnInit() {
     this.featureService.getFeatures()
-      .subscribe(features => this.features = features);
+      .subscribe(features => {
+        this.features = features;
+        this.features.sort((a, b) => {
+          if(a.getRating() < b.getRating()) {
+            return 1;
+          }
+          if(a.getRating() > b.getRating()) {
+            return -1;
+          }
+          return 0;
+        });
+      });
   }
 
 }
