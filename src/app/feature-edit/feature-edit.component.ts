@@ -27,7 +27,7 @@ export class FeatureEditComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       (parameters) => {
-        if(parameters["id"] !== undefined) {
+        if (parameters["id"] !== undefined) {
           this.id = parameters["id"];
           this.featureService.getFeature(parameters["id"])
             .subscribe(feature => this.feature = feature);
@@ -35,23 +35,31 @@ export class FeatureEditComponent implements OnInit {
       });
   }
 
-  save() {
+  save(): voic {
     this.storing = true;
-    if(this.id !== undefined) {
-      this.featureService.update(this.feature)
-        .subscribe(response => {
-          this.storing = false;
-          this.message = `"${this.feature.title}" successfully stored.`
-        });
+    if (this.id !== undefined) {
+      this.update();
     } else {
-      this.featureService.add(this.feature)
-        .subscribe(response => {
-          this.storing = false;
-          this.feature = new Feature(response);
-          this.id = this.feature.id;
-          this.message = `"${this.feature.title}" successfully added.`
-        });
+      this.add();
     }
+  }
+
+  update(): void {
+    this.featureService.update(this.feature)
+      .subscribe(response => {
+        this.storing = false;
+        this.message = `"${this.feature.title}" successfully stored.`
+      });
+  }
+
+  add(): void {
+    this.featureService.add(this.feature)
+      .subscribe(response => {
+        this.storing = false;
+        this.feature = new Feature(response);
+        this.id = this.feature.id;
+        this.message = `"${this.feature.title}" successfully added.`
+      });
   }
 
 }
