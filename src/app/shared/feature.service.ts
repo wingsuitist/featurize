@@ -27,6 +27,7 @@ export class FeatureService {
 
   delete(id: number): Observable<Feature> {
     return this.http.delete(this.featuresUrl + id, { headers: this.headers })
+      .map(response => response.json())
       .catch(this.handleError);
   }
 

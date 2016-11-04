@@ -4,4 +4,5 @@
   <hr />
   <a routerLink="/features/{{feature.id}}">{{feature.title}}</a>
   <a routerLink="/features/edit/{{feature.id}}">edit</a>
+  <ftr-feature-delete [feature]="feature" (onDelete)="onDelete(response)"></ftr-feature-delete>
 </div>

@@ -1,0 +1,7 @@
+<span *ngIf="!approveDelete">
+  <button (click)="checkDelete()">Delete</button>
+</span>
+<span *ngIf="approveDelete">
+  Do you really want to delete "{{feature.title}}"?
+  <button (click)="deleteNow()">Yes, Delete now</button> 
+</span>

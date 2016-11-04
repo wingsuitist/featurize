@@ -32,6 +32,8 @@
 
   <button type="submit"
    [disabled]="!featureForm.form.valid">Save</button>
+  
+  <ftr-feature-delete *ngIf="id" [feature]="feature" (onDelete)="onDelete(response)"></ftr-feature-delete>
 
   <h3>title classes</h3>+
   {{titleTag.className}}

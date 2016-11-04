@@ -12,6 +12,7 @@ import { FeatureTopComponent } from './feature-top/feature-top.component';
 import { FeatureDetailComponent } from './feature-detail/feature-detail.component';
 import { FeatureEditComponent } from './feature-edit/feature-edit.component';
 import { NavigationComponent } from './navigation.component';
+import { FeatureDeleteComponent } from './feature-delete/feature-delete.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavigationComponent } from './navigation.component';
     FeatureTopComponent,
     FeatureDetailComponent,
     FeatureEditComponent,
-    NavigationComponent
+    NavigationComponent,
+    FeatureDeleteComponent
   ],
   imports: [
     BrowserModule,

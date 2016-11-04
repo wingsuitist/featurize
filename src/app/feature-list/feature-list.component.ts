@@ -14,6 +14,16 @@ export class FeatureListComponent implements OnInit {
   constructor(private featureService: FeatureService) { }
 
   ngOnInit() {
+    this.getFeatures();
+  }
+
+  getFeatures() {
     this.features = this.featureService.getFeatures();
+  }
+
+  onDelete(response) {
+    console.log('deleted');
+    console.log(response);
+    this.getFeatures();
   }
 }

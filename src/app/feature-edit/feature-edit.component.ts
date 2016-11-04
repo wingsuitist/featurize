@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { Feature, FeatureService } from '../shared';
 import { Observable } from 'rxjs/Observable';
@@ -22,7 +22,8 @@ export class FeatureEditComponent implements OnInit {
   storing = false;
 
   constructor(private featureService: FeatureService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -34,8 +35,8 @@ export class FeatureEditComponent implements OnInit {
         }
       });
   }
-
-  save(): voic {
+  
+  save(): void {
     this.storing = true;
     if (this.id !== undefined) {
       this.update();
@@ -62,4 +63,7 @@ export class FeatureEditComponent implements OnInit {
       });
   }
 
+  onDelete(response) {
+    this.router.navigate(['/Features']);
+  }
 }
