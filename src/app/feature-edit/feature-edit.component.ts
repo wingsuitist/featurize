@@ -64,6 +64,6 @@ export class FeatureEditComponent implements OnInit {
   }
 
   onDelete(response) {
-    this.router.navigate(['/Features']);
+    this.router.navigate(['/features']);
   }
 }
