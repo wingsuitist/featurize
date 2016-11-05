@@ -2,5 +2,6 @@ export class Comment {
   id: number;
   body: string;
   author: string;
-  featureId: number;
+  parentId: number;
+  parentType: string;
 }

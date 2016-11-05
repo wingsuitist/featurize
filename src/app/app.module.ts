@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
+import { CommentsModule } from './comments/comments.module'
+
 import { FeatureService } from './shared';
 
 import { AppComponent } from './app.component';
@@ -28,9 +30,10 @@ import { FeatureDeleteComponent } from './feature-delete/feature-delete.componen
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommentsModule
   ],
-  providers: [FeatureService],
-  bootstrap: [AppComponent]
+  providers: [ FeatureService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
