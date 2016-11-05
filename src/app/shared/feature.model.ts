@@ -8,7 +8,8 @@ export class Feature {
   constructor(featureData) {
     this.id = featureData['id'];
     this.title = featureData['title'];
-    this.author = featureData['author'];
+    /*this.author = featureData['author'];*/
+    this.author = 'jonas.felix';
     this.description = featureData['description'];
     this.ratings = featureData['ratings'];
   }
