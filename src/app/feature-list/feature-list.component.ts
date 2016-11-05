@@ -22,8 +22,6 @@ export class FeatureListComponent implements OnInit {
   }
 
   onDelete(response) {
-    console.log('deleted');
-    console.log(response);
     this.getFeatures();
   }
 }
