@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
-import { CommentsModule } from './comments/comments.module'
+import { CommentsModule } from './comments'
 
 import { FeatureService } from './shared';
 
